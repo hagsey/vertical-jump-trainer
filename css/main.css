@@ -1,0 +1,20 @@
+body {
+  padding: 1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, p, a {
+  color: #333;
+}
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background: gray;
+  border: 1px solid black;
+  display: inline-block;
+}
