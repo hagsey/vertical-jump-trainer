@@ -53,6 +53,7 @@ a.btn-disabled:hover {
   text-align: center;
   font-weight: 300;
   font-size: 2em;
+  margin-top: 10px;
 }
 .border {
   border: 15px solid white;
