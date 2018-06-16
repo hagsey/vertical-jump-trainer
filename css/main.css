@@ -46,7 +46,7 @@ a.btn-disabled:hover {
   margin-top: 30px;
   font-weight: 300;
   letter-spacing: 2px;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 .border {
   border: 15px solid white;
@@ -65,14 +65,13 @@ a.btn-disabled:hover {
 
 .box {
   width: 40%;
-  margin: 4%;
+  margin: 10px 4%;
   display: inline-block;
 }
 
 .answer-label {
   text-align: center;
   font-weight: 300;
-  font-size: 2em;
 }
 
 .answer-container {
