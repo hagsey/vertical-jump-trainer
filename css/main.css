@@ -69,6 +69,7 @@ a.btn-disabled:hover {
   position: absolute;
   top: 15px;
   left: 15px;
+  color: #999;
 }
 
 .container {
