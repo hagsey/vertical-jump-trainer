@@ -12,9 +12,11 @@ $(function() {
         if (total_guesses === 4 && correct_guesses === 4) {
           $(".border").css("border-color", "#78e08f");
           $("a.btn").removeClass("btn-disabled");
+          $(".message").css("color", "#333").text("Good job!");
         } else if (total_guesses === 4 && correct_guesses < 4) {
           $(".border").css("border-color", "#e55039");
-
+          $("a.btn").addClass("btn-disabled");
+          $(".message").css("color", "#333").text("Almost, keep trying.");
         }
     }
 

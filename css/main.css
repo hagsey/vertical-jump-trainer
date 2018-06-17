@@ -99,3 +99,6 @@ a.btn-disabled:hover {
   cursor: pointer;
   display: inline-block;
 }
+.message {
+  color: white;
+}
