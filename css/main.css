@@ -92,6 +92,7 @@ a.btn-disabled:hover {
 .answer-label {
   text-align: center;
   font-weight: 300;
+  font-size: 1.1em;
 }
 
 .answer-container {
