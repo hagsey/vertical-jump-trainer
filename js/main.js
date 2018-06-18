@@ -16,7 +16,11 @@ $(function() {
         } else if (total_guesses === 4 && correct_guesses < 4) {
           $(".border").css("border-color", "#e55039");
           $("a.btn").addClass("btn-disabled");
-          $(".message").css("color", "#333").text("You have " + (4 - correct_guesses) + " incorrect answers. Keep trying!");
+          if (incorrect_guesses === 1) {
+            $(".message").css("color", "#333").text("You have 1 incorrect answer. Keep trying!");
+          }else {
+            $(".message").css("color", "#333").text("You have " + incorrect_guesses + " incorrect answers. Keep trying!");
+          }
         }
     }
 
