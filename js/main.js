@@ -34,6 +34,7 @@ $(function() {
         } else if (total_guesses === 4 && correct_guesses < 4) {
           $(".border").css("border-color", "#e55039");
           $("a.btn").addClass("btn-disabled");
+          $(".box.guess-incorrect").css("border", "2px solid #e55039");
           $(".message").css("color", "#333").text(grade);
         }
     }
