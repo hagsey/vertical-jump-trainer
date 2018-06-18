@@ -25,7 +25,7 @@ $(function() {
         var correct_guesses = $(".box.guess-correct").length;
         var incorrect_guesses = $(".box.guess-incorrect").length;
         var total_guesses = correct_guesses + incorrect_guesses;
-        var grade = ((correct_guesses / 4)*100) + "%...keep practicing!";
+        var grade = "You got " + correct_guesses + " / 4 correct...keep practicing!";
 
         if (total_guesses === 4 && correct_guesses === 4) {
           $(".border").css("border-color", "#78e08f");
