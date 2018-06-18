@@ -5,14 +5,11 @@ $(function() {
         var incorrect_guesses = $(".box.guess-incorrect").length;
         var total_guesses = correct_guesses + incorrect_guesses;
 
-        console.log('correct', correct_guesses);
-        console.log('incorrect', incorrect_guesses);
-        console.log('total', total_guesses);
-
         if (total_guesses === 4 && correct_guesses === 4) {
           $(".border").css("border-color", "#78e08f");
           $("a.btn").removeClass("btn-disabled");
           $(".message").css("color", "#333").text("Good job!");
+          $(".answer-yes, .answer-no").off();
         } else if (total_guesses === 4 && correct_guesses < 4) {
           $(".border").css("border-color", "#e55039");
           $("a.btn").addClass("btn-disabled");
@@ -23,6 +20,24 @@ $(function() {
           }
         }
     }
+
+    function checkFinalExam() {
+        var correct_guesses = $(".box.guess-correct").length;
+        var incorrect_guesses = $(".box.guess-incorrect").length;
+        var total_guesses = correct_guesses + incorrect_guesses;
+        var grade = ((correct_guesses / 4)*100) + "%...keep practicing!";
+
+        if (total_guesses === 4 && correct_guesses === 4) {
+          $(".border").css("border-color", "#78e08f");
+          $("a.btn").removeClass("btn-disabled");
+          $(".message").css("color", "#333").text("100%...Good job!");
+        } else if (total_guesses === 4 && correct_guesses < 4) {
+          $(".border").css("border-color", "#e55039");
+          $("a.btn").addClass("btn-disabled");
+          $(".message").css("color", "#333").text(grade);
+        }
+    }
+
 
     $(".answer-yes").on("click", function() {
         var $box = $(this).closest(".box");
@@ -38,7 +53,14 @@ $(function() {
             $box.addClass("guess-incorrect");
         }
 
-        checkAnswer();
+        if ($box.hasClass("final-exam")) {
+          $box.find(".answer-yes").off();
+          $box.find(".answer-no").off();
+          checkFinalExam();
+        } else {
+          checkAnswer();
+        }
+
     });
 
     $(".answer-no").on("click", function() {
@@ -55,7 +77,13 @@ $(function() {
             $box.addClass("guess-incorrect");
         }
 
-        checkAnswer();
+        if ($box.hasClass("final-exam")) {
+          $box.find(".answer-yes").off();
+          $box.find(".answer-no").off();
+          checkFinalExam();
+        } else {
+          checkAnswer();
+        }
 
     });
 });

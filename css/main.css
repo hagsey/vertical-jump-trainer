@@ -55,6 +55,11 @@ a.btn-disabled:hover {
   font-size: 2em;
   margin-top: 10px;
 }
+.exam-subtitle {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.6em;
+}
 .border {
   border: 15px solid white;
   position: absolute;
